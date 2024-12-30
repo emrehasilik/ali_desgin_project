@@ -8,8 +8,8 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-white border-gray-200 dark:bg-gray-900 relative">
-      <div className="max-w-screen-xl flex items-center justify-between mx-auto p-4">
+    <nav className="bg-white border-gray-200 relative">
+      <div className="max-w-screen-xl flex items-center justify-between mx-auto p-4 border-b border-gray-300">
         {/* Logo */}
         <a
           href="#"
@@ -20,7 +20,7 @@ const Navbar = () => {
             className="h-8"
             alt="Logo"
           />
-          <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+          <span className="self-center text-2xl font-extrabold whitespace-nowrap text-gray-900">
             MY WEB SITE
           </span>
         </a>
@@ -31,7 +31,7 @@ const Navbar = () => {
             <li>
               <a
                 href="#"
-                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                className="block py-2 px-3 text-gray-800 rounded hover:bg-gray-200 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 font-bold"
               >
                 Anasayfa
               </a>
@@ -39,7 +39,7 @@ const Navbar = () => {
             <li>
               <a
                 href="#"
-                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                className="block py-2 px-3 text-gray-800 rounded hover:bg-gray-200 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 font-bold"
               >
                 Mağaza
               </a>
@@ -47,7 +47,7 @@ const Navbar = () => {
             <li>
               <a
                 href="#"
-                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                className="block py-2 px-3 text-gray-800 rounded hover:bg-gray-200 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 font-bold"
               >
                 İletişim
               </a>
@@ -58,7 +58,7 @@ const Navbar = () => {
         {/* Right side buttons */}
         <div className="flex items-center md:order-2 space-x-4 pr-4 md:pr-8">
           <button
-            className="inline-flex items-center font-medium justify-center px-4 py-2 text-sm text-gray-900 dark:text-white rounded-lg cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-700"
+            className="inline-flex items-center font-medium justify-center px-4 py-2 text-sm text-gray-800 rounded-lg cursor-pointer hover:bg-gray-200"
             onClick={() => alert("Language options")}
           >
             <svg
@@ -100,7 +100,7 @@ const Navbar = () => {
             English (US)
           </button>
           <button
-            className="block md:hidden p-2 text-gray-500 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700"
+            className="block md:hidden p-2 text-gray-500 rounded-lg hover:bg-gray-200"
             onClick={toggleSidebar}
           >
             <svg
@@ -122,7 +122,7 @@ const Navbar = () => {
       </div>
 
       {isSidebarOpen && (
-        <div className="fixed top-16 left-0 w-64 h-full bg-gray-800 text-white shadow-lg p-4 z-50">
+        <div className="fixed top-16 left-0 w-64 h-full bg-gray-700 text-white shadow-lg p-4 z-50">
           <button
             className="text-right text-white mb-4"
             onClick={toggleSidebar}
@@ -136,6 +136,7 @@ const Navbar = () => {
           </ul>
         </div>
       )}
+      <div className="h-6 md:hidden"></div> {/* Küçük ekranlarda boşluk için */}
     </nav>
   );
 };

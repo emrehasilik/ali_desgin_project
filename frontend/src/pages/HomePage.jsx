@@ -2,11 +2,11 @@ import React from "react";
 import Navbar from "../components/Navbar";
 
 const categories = [
-  { id: 1, name: "Ahşap", image: "ahsap.jpg" },
-  { id: 2, name: "Metal", image: "metal.jpg" },
-  { id: 3, name: "Custom", image: "custom.jpg" },
-  { id: 4, name: "Canvas", image: "canvas.jpg" },
-  { id: 5, name: "Halı", image: "hali.jpg" },
+  { id: 1, name: "Ahşap", image: "deneme.jpg" },
+  { id: 2, name: "Metal", image: "deneme.jpg" },
+  { id: 3, name: "Custom", image: "deneme.jpg" },
+  { id: 4, name: "Canvas", image: "deneme.jpg" },
+  { id: 5, name: "Halı", image: "deneme.jpg" },
 ];
 
 const HomePage = () => {
@@ -21,9 +21,9 @@ const HomePage = () => {
   };
 
   return (
-    <div className="bg-gray-100 min-h-screen">
+    <div className="bg-gray-[#FAF9F6] min-h-screen">
       <Navbar />
-      <div className="flex flex-col items-center h-full xl:mt-36 space-y-4 md:flex-row  md:justify-center md:items-center md:space-y-0 md:space-x-2">
+      <div className="flex flex-col items-center h-full xl:mt-36 space-y-4 md:flex-row * md:justify-center md:items-center md:space-y-0 md:space-x-2 md:">
         {categories.map((category) => (
           <div
             key={category.id}
